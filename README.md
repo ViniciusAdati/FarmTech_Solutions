@@ -6,7 +6,7 @@
 
 <br>
 
-# Nome do projeto
+# FarmTech Solutions: Assistente Agrícola Inteligente
 
 ## Nome do grupo
 
@@ -49,7 +49,33 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+### Pré-requisitos
+* Python 3.10+ instalado.
+* Acesso a uma instância do banco de dados Oracle configurada (as credenciais de acesso devem ser adicionadas a um arquivo `.env` na raiz do projeto).
+
+### Passo 1: Instalar Dependências
+Instale todos os pacotes necessários listados no `requirements.txt`:
+```bash
+pip install -r src/requirements.txt
+```
+
+### Passo 2: Configuração do Banco de Dados
+Para criar a tabela `SENSORES` no seu banco de dados Oracle e populá-la com 100 registros de treino simulados:
+```bash
+python scripts/setup_oracle.py
+```
+
+### Passo 3: Treinar o Modelo de Machine Learning
+Treine o modelo de Regressão Linear com base nos dados históricos carregados do Oracle e exporte o arquivo binário `modelo_irrigacao.pkl`:
+```bash
+python src/modelo.py
+```
+
+### Passo 4: Executar a Interface Streamlit
+Com o modelo gerado, inicie o dashboard analítico e o simulador interativo:
+```bash
+streamlit run src/app.py
+```
 
 
 ## 🗃 Histórico de lançamentos
