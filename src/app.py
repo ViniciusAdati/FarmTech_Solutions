@@ -13,11 +13,11 @@ st.title("🌾 FarmTech Solutions: Assistente Agrícola Inteligente")
 
 @st.cache_data(ttl=10) 
 def carregar_dados():
-    usuario = os.getenv("DB_USER")
-    senha = os.getenv("DB_PASS")
-    host = os.getenv("DB_HOST")
-    porta = os.getenv("DB_PORT")
-    servico = os.getenv("DB_SERVICE")
+    usuario = os.getenv("DB_USER") or os.getenv("ORACLE_USER")
+    senha = os.getenv("DB_PASS") or os.getenv("ORACLE_PASSWORD")
+    host = os.getenv("DB_HOST") or os.getenv("ORACLE_HOST")
+    porta = os.getenv("DB_PORT") or os.getenv("ORACLE_PORT")
+    servico = os.getenv("DB_SERVICE") or os.getenv("ORACLE_SERVICE_NAME")
     
     url_banco = f"oracle+oracledb://{usuario}:{senha}@{host}:{porta}/?service_name={servico}"
     

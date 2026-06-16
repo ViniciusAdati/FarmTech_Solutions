@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine
 import joblib
@@ -6,11 +8,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import numpy as np
 
-usuario = os.getenv("DB_USER")
-senha = os.getenv("DB_PASS")
-host = os.getenv("DB_HOST")
-porta = os.getenv("DB_PORT")
-servico = os.getenv("DB_SERVICE")
+load_dotenv()
+
+usuario = os.getenv("DB_USER") or os.getenv("ORACLE_USER")
+senha = os.getenv("DB_PASS") or os.getenv("ORACLE_PASSWORD")
+host = os.getenv("DB_HOST") or os.getenv("ORACLE_HOST")
+porta = os.getenv("DB_PORT") or os.getenv("ORACLE_PORT")
+servico = os.getenv("DB_SERVICE") or os.getenv("ORACLE_SERVICE_NAME")
 
 url_banco = f"oracle+oracledb://{usuario}:{senha}@{host}:{porta}/?service_name={servico}"
 
