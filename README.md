@@ -6,46 +6,48 @@
 
 <br>
 
-# FarmTech Solutions: Assistente Agrícola Inteligente
+# FarmTech Solutions: Assistente Agrícola Inteligente (Fase 4)
 
-## Nome do grupo
+## Grupo 84
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Milton Akira Fukuhara</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Samyr de Souza Pereira</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Antonio Filipe de Souza Branco</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Albert Oliveira Ribeiro</a> 
+- <a href="https://www.linkedin.com/in/vinicius-adati/">Vinicius Seiti Adati</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Sabrina Otoni</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">André Godoi Chiovato</a>
 
+---
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+Na quarta fase de desenvolvimento do **FarmTech Solutions**, o projeto evolui da etapa de estruturação de dados para a tomada de decisão autônoma utilizando Inteligência Artificial e visualização em tempo real. O objetivo central é fornecer ao gestor agrícola um sistema preditivo que analisa as condições do solo e indica a necessidade exata de irrigação, otimizando o uso de recursos hídricos.
 
+O ecossistema consome os dados simulados dos sensores (Umidade, pH, NPK e status de chuva) diretamente de um banco de dados em nuvem **Oracle Cloud**. Para garantir os padrões de mercado, implementamos uma arquitetura de segurança utilizando o `python-dotenv`, isolando as credenciais do banco em variáveis de ambiente (`.env`).
+
+Após o processo de extração e limpeza robusta com a biblioteca Pandas, a aplicação utiliza o Scikit-Learn para treinar um modelo preditivo de **Regressão Linear**. Este modelo é exportado e consumido por um Dashboard interativo desenvolvido em **Streamlit**. Através dessa interface, o usuário pode monitorar os gráficos analíticos da produção e utilizar um Simulador de Manejo Agrícola, onde a IA processa os inputs climáticos inseridos e emite diagnósticos operacionais instantâneos sobre o acionamento da bomba de irrigação.
+
+---
 
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+- <b>.github</b>: Arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+- <b>assets</b>: Arquivos relacionados a elementos não-estruturados deste repositório, como imagens de evidência.
+- <b>config</b>: Arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+- <b>document</b>: Documentos do projeto requeridos nas atividades e modelagens.
+- <b>scripts</b>: Scripts auxiliares para tarefas específicas, como ingestão de dados e setup do banco.
+- <b>src</b>: Todo o código fonte criado para a Fase 4 (`app.py`, `modelo.py`, `requirements.txt` e o artefato de ML `modelo_irrigacao.pkl`).
+- <b>README.md</b>: Arquivo que serve como guia e explicação geral sobre o projeto.
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
-
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
-
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
-
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
-
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
-
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+---
 
 ## 🔧 Como executar o código
 
@@ -57,42 +59,3 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 Instale todos os pacotes necessários listados no `requirements.txt`:
 ```bash
 pip install -r src/requirements.txt
-```
-
-### Passo 2: Configuração do Banco de Dados
-Para criar a tabela `SENSORES` no seu banco de dados Oracle e populá-la com 100 registros de treino simulados:
-```bash
-python scripts/setup_oracle.py
-```
-
-### Passo 3: Treinar o Modelo de Machine Learning
-Treine o modelo de Regressão Linear com base nos dados históricos carregados do Oracle e exporte o arquivo binário `modelo_irrigacao.pkl`:
-```bash
-python src/modelo.py
-```
-
-### Passo 4: Executar a Interface Streamlit
-Com o modelo gerado, inicie o dashboard analítico e o simulador interativo:
-```bash
-streamlit run src/app.py
-```
-
-
-## 🗃 Histórico de lançamentos
-
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
-
-## 📋 Licença
-
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
-
-
