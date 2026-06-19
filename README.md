@@ -8,7 +8,7 @@
 
 # FarmTech Solutions: Assistente Agrícola Inteligente (Fase 4)
 
-## Grupo 84
+## Grupo 60
 
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/company/inova-fusca">Milton Akira Fukuhara</a>
@@ -33,6 +33,7 @@ O ecossistema consome os dados simulados dos sensores (Umidade, pH, NPK e status
 
 Após o processo de extração e limpeza robusta com a biblioteca Pandas, a aplicação utiliza o Scikit-Learn para treinar um modelo preditivo de **Regressão Linear**. Este modelo é exportado e consumido por um Dashboard interativo desenvolvido em **Streamlit**. Através dessa interface, o usuário pode monitorar os gráficos analíticos da produção e utilizar um Simulador de Manejo Agrícola, onde a IA processa os inputs climáticos inseridos e emite diagnósticos operacionais instantâneos sobre o acionamento da bomba de irrigação.
 
+Mias informações, vídeo no YT:https://youtu.be/sZGCBQeMAik e https://youtu.be/7ltbqva4W5c
 ---
 
 ## 📁 Estrutura de pastas
