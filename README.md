@@ -1,29 +1,6 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
-<p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
-</p>
-
-<br>
-
-# FarmTech Solutions: Assistente Agrícola Inteligente (Fase 4)
-
-## Grupo 60
-
-## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Milton Akira Fukuhara</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Samyr de Souza Pereira</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Antonio Filipe de Souza Branco</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Albert Oliveira Ribeiro</a> 
-- <a href="https://www.linkedin.com/in/vinicius-adati/">Vinicius Seiti Adati</a>
-
-## 👩‍🏫 Professores:
-### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Sabrina Otoni</a>
-### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">André Godoi Chiovato</a>
-
----
+# FarmTech Solutions: Assistente Agrícola Inteligente
 
 ## 📜 Descrição
 
