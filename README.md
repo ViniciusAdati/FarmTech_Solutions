@@ -1,5 +1,3 @@
-# FIAP - Faculdade de Informática e Administração Paulista
-
 # FarmTech Solutions: Assistente Agrícola Inteligente
 
 ## 📜 Descrição
